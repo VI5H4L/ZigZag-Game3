@@ -52,6 +52,7 @@ public class GameManager : MonoBehaviour
     {
         
         gameStarted = true;
+        CarController.moveSpeed = 8f;
         platformSpawner.SetActive(true);
 
         menuUI.SetActive(false);
@@ -96,6 +97,7 @@ public class GameManager : MonoBehaviour
         {
             yield return new WaitForSeconds(25f);
             CarController.moveSpeed += 0.5f;
+            print(CarController.moveSpeed);
         }
     } 
 
